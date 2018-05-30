@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TopHeader from './components/TopHeader';
 import PostBody from './components/PostBody';
 import CommentList from './components/CommentList';
 import Counter from './components/Counter';
+import Clock from './components/Clock';
 
 class App extends Component {
 
@@ -25,6 +25,7 @@ class App extends Component {
                     <CommentList />
                 </div>
                 <Counter />
+                <Clock />
             </div>
 
         );
