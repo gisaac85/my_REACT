@@ -18,6 +18,20 @@
   margin: 5px;
 }
 
+.panel {
+  border: 1px solid #1b2431;
+  border-radius: 3px;
+  background: #273142;
+  color: #fff;
+  max-width: 200px;
+  min-height: 50px;
+  margin: 10px auto;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

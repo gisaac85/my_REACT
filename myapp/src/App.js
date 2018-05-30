@@ -4,8 +4,10 @@ import './App.css';
 import TopHeader from './components/TopHeader';
 import PostBody from './components/PostBody';
 import CommentList from './components/CommentList';
+import Counter from './components/Counter';
 
 class App extends Component {
+
 
     render() {
 
@@ -22,6 +24,7 @@ class App extends Component {
                     <hr />
                     <CommentList />
                 </div>
+                <Counter />
             </div>
 
         );
