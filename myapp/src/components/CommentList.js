@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
+import CommentItem from './CommentItem';
 
 class CommentList extends Component {
 
     render() {
-        const comment = (
-            <div>
-                <div className="comment">
-                    <span>
-                        <strong>Gaorieh said:
-                        </strong>
-                        Great content</span>
-                </div>
-                <div className="comment">
-                    <span>
-                        <strong>John said:
-                        </strong>
-                        Great stylish</span>
-                </div>
-            </div>
-        );
+        const comments = [
+            {
+                'user': 'Gaorieh',
+                'comment': 'Great content'
+            }, {
+                'user': 'John',
+                'comment': 'Great stylish'
+
+            }, {
+                'user': 'Jitel',
+                'comment': 'Awesome!'
+
+            }
+        ];
+        const commentElement = comments.map((element, index) => (
+
+            <CommentItem user={element.user} comment={element.comment} />
+        ));
+
         return (
-            <div>{comment}</div>)
+            <div>
+                {commentElement}
+
+            </div>
+        )
 
     }
 };
