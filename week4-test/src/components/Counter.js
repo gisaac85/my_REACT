@@ -4,16 +4,10 @@ import { inject, observer } from 'mobx-react';
 @inject('counter')
 
 @observer
-class Counter extends Component {
-    state = {
-        count: 0,
-    };
-
-    handleIncreaseCount = () => this.setState({ count: this.state.count + 1 });
-    handleDecreaseCount = () => this.setState({ count: this.state.count - 1 });
+export default class Counter extends Component {
 
     render() {
-        const { count, increaseCount, decreaseCount } = this.props.Counter;
+        const { count, increaseCount, decreaseCount } = this.props.counter;
         return (
             <div className="panel">
                 <h1>Counter
@@ -40,6 +34,4 @@ class Counter extends Component {
     //     console.log('component will mount');
     //     console.log(this.state);
     // }
-};
-
-export default Counter;
+}

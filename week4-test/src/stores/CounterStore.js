@@ -1,6 +1,11 @@
 import { action, observable } from 'mobx';
+import { configure } from 'mobx';
+
+configure({ enforceActions: true });
+
 
 export default class CounterStore {
+
     @observable
     count = 0
 

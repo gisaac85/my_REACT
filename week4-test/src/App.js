@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Counter from './components/Counter';
-import { Provider, observer } from 'mobx-react';
+import { Provider } from 'mobx-react';
 import stores from './stores';
 
 
