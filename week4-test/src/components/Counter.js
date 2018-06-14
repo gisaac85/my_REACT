@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
 
+@inject('counter')
+
+@observer
 class Counter extends Component {
     state = {
         count: 0,
@@ -9,18 +13,18 @@ class Counter extends Component {
     handleDecreaseCount = () => this.setState({ count: this.state.count - 1 });
 
     render() {
-
+        const { count, increaseCount, decreaseCount } = this.props.Counter;
         return (
             <div className="panel">
                 <h1>Counter
-                <span className='header-count'> | {this.state.count}</span></h1>
+              <span className='header-count'> | {count}</span></h1>
 
-                <button onClick={this.handleIncreaseCount}>
+                <button onClick={increaseCount}>
                     Increase
-        </button>
-                <button onClick={this.handleDecreaseCount}>
+         </button>
+                <button onClick={decreaseCount}>
                     Decrease
-        </button>
+         </button>
             </div>
         );
     }
